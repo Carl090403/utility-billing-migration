@@ -1,0 +1,13 @@
+account_number,first_name,last_name,phone_e164,email,status,opened_on,reject_reason,entity,premise_id,address_line1,city,postal_code,meter_number,service_type,installed_on,read_on,read_value,balance_cents
+,,,,,,,orphan: meter_number not found in parent,reading,,,,,X000000,,,2026-03-15,123,
+,,,,,,,orphan: meter_number not found in parent,reading,,,,,X000001,,,2026-03-15,123,
+,,,,,,,orphan: meter_number not found in parent,reading,,,,,X000002,,,2026-03-15,123,
+,,,,,,,orphan: meter_number not found in parent,reading,,,,,X000003,,,2026-03-15,123,
+,,,,,,,orphan: meter_number not found in parent,reading,,,,,X000004,,,2026-03-15,123,
+,,,,,,,orphan: meter_number not found in parent,reading,,,,,X000005,,,2026-03-15,123,
+,,,,,,,orphan: meter_number not found in parent,reading,,,,,X000006,,,2026-03-15,123,
+,,,,,,,orphan: meter_number not found in parent,reading,,,,,X000007,,,2026-03-15,123,
+,,,,,,,orphan: meter_number not found in parent,reading,,,,,X000008,,,2026-03-15,123,
+,,,,,,,orphan: meter_number not found in parent,reading,,,,,X000009,,,2026-03-15,123,
+,,,,,,,orphan: meter_number not found in parent,reading,,,,,X000010,,,2026-03-15,123,
+,,,,,,,orphan: meter_number not found in parent,reading,,,,,X000011,,,2026-03-15,123,

@@ -1,0 +1,58 @@
+{
+  "_comment": "Metadata-driven mapping: each target entity lists its source table, column mappings and the cleaning rule applied. Adding a new utility client = editing this file, not the code.",
+  "status_codes": {"A": "ACTIVE", "I": "INACTIVE", "F": "FINAL_BILLED", "P": "PENDING_START"},
+  "service_types": {"W": "WATER", "E": "ELECTRIC", "G": "GAS"},
+  "entities": {
+    "customer": {
+      "source": "CUSTMAST",
+      "key": "CUST_NO",
+      "columns": {
+        "account_number": {"from": "CUST_NO", "rule": "strip"},
+        "first_name": {"from": "CUST_NAME", "rule": "name_first"},
+        "last_name": {"from": "CUST_NAME", "rule": "name_last"},
+        "phone_e164": {"from": "PHONE", "rule": "phone_e164"},
+        "email": {"from": "EMAIL", "rule": "email"},
+        "status": {"from": "STAT_CD", "rule": "status_code"},
+        "opened_on": {"from": "OPEN_DT", "rule": "date"}
+      }
+    },
+    "premise": {
+      "source": "PREMISE",
+      "key": "PREM_ID",
+      "columns": {
+        "premise_id": {"from": "PREM_ID", "rule": "strip"},
+        "account_number": {"from": "CUST_NO", "rule": "strip"},
+        "address_line1": {"from": "ADDR1", "rule": "title"},
+        "city": {"from": "CITY", "rule": "title"},
+        "postal_code": {"from": "POSTAL", "rule": "postal_ca"}
+      }
+    },
+    "meter": {
+      "source": "METER",
+      "key": "METER_NO",
+      "columns": {
+        "meter_number": {"from": "METER_NO", "rule": "strip"},
+        "premise_id": {"from": "PREM_ID", "rule": "strip"},
+        "service_type": {"from": "SVC_TYPE", "rule": "service_type"},
+        "installed_on": {"from": "INSTALL_DT", "rule": "date"}
+      }
+    },
+    "reading": {
+      "source": "READING",
+      "key": null,
+      "columns": {
+        "meter_number": {"from": "METER_NO", "rule": "strip"},
+        "read_on": {"from": "READ_DT", "rule": "date"},
+        "read_value": {"from": "READ_VAL", "rule": "integer"}
+      }
+    },
+    "balance": {
+      "source": "ARBAL",
+      "key": "CUST_NO",
+      "columns": {
+        "account_number": {"from": "CUST_NO", "rule": "strip"},
+        "balance_cents": {"from": "BAL_AMT", "rule": "money_cents"}
+      }
+    }
+  }
+}

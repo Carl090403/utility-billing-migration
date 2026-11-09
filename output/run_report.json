@@ -1,0 +1,28 @@
+{
+  "source_rows": {
+    "customer": 419,
+    "premise": 400,
+    "meter": 604,
+    "reading": 3636,
+    "balance": 400
+  },
+  "loaded_rows": {
+    "customer": 400,
+    "premise": 400,
+    "meter": 604,
+    "reading": 3624,
+    "balance": 400
+  },
+  "rejects": {
+    "reading": 12
+  },
+  "duplicates_merged": 19,
+  "reconciliation": {
+    "source_balance_cents": 9684706,
+    "target_balance_cents": 9684706,
+    "balance_matches": true,
+    "row_accounting_balanced": true,
+    "foreign_key_violations": 0
+  },
+  "seconds": 0.562
+}
